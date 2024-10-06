@@ -11,7 +11,7 @@ Here’s a 3-month timeline to learn DSA in Js
 
 #### **Week 2: Arrays & Strings**
    - **Day 8-10**: Study arrays: insertion, deletion, searching, and sorting algorithms.
-   - **Day 11-12**: Practice common string manipulation techniques. My
+   - **Day 11-12**: Practice common string manipulation techniques.
    - **Day 13-14**: Start solving easy problems on arrays and strings on LeetCode/HackerRank.
    
    **Practice**: Solve 3 problems per day on arrays and strings.

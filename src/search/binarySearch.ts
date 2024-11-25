@@ -1,16 +1,21 @@
-const binarySearch = (arr: number[], target: number, left: number, right: number) => {
-  if (!right === undefined) {
-    right = arr.length;
-  }
+interface BinarySearchInput {
+  arr: number[];
+  target: number;
+  left?: number;
+  right?: number;
+}
+
+const binarySearch = ({ arr, target, left = 0, right = arr.length - 1 }: BinarySearchInput): number => {
   if (left > right) {
     return -1;
   }
-  const mid = Math.floor(left + right / 2);
-  if (arr[mid] == target) {
+  const mid: number = Math.floor((left + right) / 2);
+
+  if (arr[mid] === target) {
     return mid;
   } else if (arr[mid] < target) {
-    binarySearch(arr, target, mid + 1, right);
+    return binarySearch({ arr, target, left: mid + 1, right });
   } else {
-    binarySearch(arr, target, left, mid - 1);
+    return binarySearch({ arr, target, left, right: mid - 1 });
   }
 };
